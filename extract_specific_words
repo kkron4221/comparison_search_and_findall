@@ -1,0 +1,12 @@
+import re
+word = "Hello Python Purl PHP"
+print(word)
+print("\n")
+
+regex_forward = re.compile(r'(?<=Hello).*')
+regex_backward = re.compile(r'.*(?=Purl)')
+
+word_delete_forward_character = regex_forward.search(word)
+word_delete_backward_character = regex_backward.search(word_delete_forward_character.group())
+
+print(word_delete_backward_character.group())
