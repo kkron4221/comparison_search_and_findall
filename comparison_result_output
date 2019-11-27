@@ -1,0 +1,15 @@
+import re
+word = "Hello Python Purl PHP"
+print(word)
+print("\n")
+
+regex = re.compile(r'.*(?=Purl)')
+word_re_search = regex.search(word)
+word_re_findall = regex.findall(word)
+
+print(word_re_search)
+print(word_re_search.group())
+print("\n")
+
+print(word_re_findall)
+print(word_re_findall[0])
