@@ -1,0 +1,12 @@
+import re
+test_str = '''Content-Transfer-Encoding: base64 
+xyz'''
+test_str2 = "Content-Transfer-Encoding: base64 xyz"
+
+test_re = re.compile(r'base64.*')
+
+#get base64
+print(test_re.search(test_str))
+
+#get base64 xyz
+print(test_re.search(test_str2))
